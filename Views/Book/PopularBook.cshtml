@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Lession1.Models.Book>
+@{
+    ViewData["Title"] = "PopularBook";
+}
+
+
+
+@foreach(var item in Model)
+{
+    <div class="col-3">
+        <div>
+            <img>
+            <div>
+                <h3>@item.Title</h3>
+                <p>Price: @item.Price</p>
+            </div>
+        </div>
+
+    </div>
+}
+

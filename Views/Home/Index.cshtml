@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <partial name="Banner"/>
+
+    @Html.RenderPartialAsync("Banner")
+
+
+
+    <button id="loadAjax">Click</button>
+    <div id="data-from-ajax" class="row">Loadding...</div>
+
+    @section Scripts{
+        <script>
+            $('#loadAjax').click(function () {
+                $('#data-from-ajax').load("/Book/PopularBook");
+            })
+        </script>
+    }
+
